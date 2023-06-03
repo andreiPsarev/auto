@@ -67,7 +67,7 @@ public final class Configuration {
         } else if (clazz == Character.class) {
             return (T) Character.valueOf(value.charAt(0));
         } else {
-            throw new IllegalArgumentException("Cannot cast parameter value " + value + " to " + clazz);
+            throw new IllegalArgumentException("Canot cast parameter value " + value + " to " + clazz);
         }
     }
 }
