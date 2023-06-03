@@ -62,7 +62,7 @@ public final class PostService {
         try (Connection connection = DataSource.getConnection()) {
             return connection.createQuery(POST_COUNT_SQL).executeScalar(Integer.class);
         } catch (SQLException throwables) {
-            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problem with database connection: " + throwables);
+            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problems with database connection: " + throwables);
         }
     }
 
