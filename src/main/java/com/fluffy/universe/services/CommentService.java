@@ -55,7 +55,7 @@ public final class CommentService {
                 connection.createQuery(UPDATE_COMMENT_SQL).bind(comment).executeUpdate();
             }
         } catch (SQLException throwables) {
-            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problems with databases connection: " + throwables);
+            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problems with database connection: " + throwables);
         }
     }
 }
